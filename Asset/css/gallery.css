@@ -1,0 +1,43 @@
+.tz-gallery {
+    padding: 30px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.tz-gallery img {
+    border-radius: 10px;
+}
+
+.tz-gallery .caption{
+    padding: 10px 0px;
+    text-align: right;
+}
+
+.tz-gallery .caption h3 {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 15px;
+    color: #440A0A;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+.button {
+    background-color: #FAF8F8;
+    border: none;
+    color: #440A0A;
+    cursor: pointer;
+  }
