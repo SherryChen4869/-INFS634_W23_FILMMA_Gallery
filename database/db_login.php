@@ -1,7 +1,7 @@
 <?php
-$server = 'localhost:8889';
+$server = 'localhost';
 $username = 'root';
-$password = '';
+$password = 'root';
 $database = 'FILMMA';
 
 

@@ -13,16 +13,25 @@ body{
     background-image: url("/Asset/img/AB.jpg");
     background-repeat: no-repeat;
     background-size: 100% 375px;
+    bottom: 0;
+}
+
+#CTbg {
+    background-image: url("/Asset/img/CT.jpg");
+    background-repeat: no-repeat;
+    background-size: 43% 100%;
 }
 
 .footer {
-    position: fixed;
+    background-color: none;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 8px;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 2%;
  }
 
 
@@ -52,32 +61,22 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 1.5em;
-    margin-left: 720px;
-    right: auto;
+    margin-right: 15px;
+    padding-top: 50%;
 }
+
+@media only screen and (max-width: 576px) {
+    #p3 {
+      padding-top: 20% !important;
+      padding-left: 1rem;
+    }
+  }
 
 #p4 { 
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 2em;
     text-align: left;
-}
-
-#left, #right {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-}
-
-#left {
-    left: 0;
-    background-color:#FAF8F8;
-}
-
-#right {
-    right: 0;
-    background-color:#FAF8F8;
 }
 
 .center { 
@@ -109,7 +108,7 @@ body{
 .image {
     position: absolute;
     left: 0;
-    width: 90%;
+    width: 100%;
     height: max-content;
 }
 

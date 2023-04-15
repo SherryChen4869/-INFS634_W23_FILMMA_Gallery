@@ -8,9 +8,9 @@ $TimeDate = $date->format('Y-m-d H:i:s');
 
 require 'database/db_login.php'; //load credentials 
 
-if(!empty($_POST['email']) && !empty($_POST['message'])){ //check if email and password is submitted using POST method
+if(!empty($_POST['Email']) && !empty($_POST['Message'])){ //check if email and password is submitted using POST method
 
-    $sql = "INSERT INTO `Contact` ('id', `fname`, `lname`, `email`, `message`) VALUES (NULL, '".$_POST['fname']."', '".$_POST['lname']."','".$_POST['email']."', '".$_POST['message']."')";
+    $sql = "INSERT INTO `Contact` (`ID`, `First_Name`, `Last_Name`, `Email`, `Message`) VALUES (NULL, '".$_POST['First_Name']."', '".$_POST['Last_Name']."','".$_POST['Email']."', '".$_POST['Message']."')";
     $stmt = $conn->prepare($sql);
 
     if( $stmt->execute() ){  
@@ -31,49 +31,55 @@ if(!empty($_POST['email']) && !empty($_POST['message'])){ //check if email and p
 
     </head>
    
-    <body style="background-color:#FAF8F8">
+    <body>
 
-    <div id="left">
-    <div class="container-fluid">
-        <img src="asset/img/CT.jpg" class="rounded float-start" height=100% width=90%>  
-    </div>
+    <div id="CTbg">
+        <?php include('header.php'); ?>
+    
+        <div class="row">
 
-    </div>
-	<div id="right" class="bigbox">
-        <p id='p2'>Contact Us </p>
+        <div class="col-6">
+        </div>
 
-        <form class="row g-3">
-        <div class="col-md-5">
-            <label class="form-label">First Name</label>
-            <input type="text" class="form-control form-control-sm" name="fname">
+        <div class="col-6">
+            <p id='p2'>Contact Us </p>
+
+            <form action="#" method="POST" id="contact_form" class="row g-3">
+
+                <div class="col-md-5">
+                    <label class="form-label">First Name</label>
+                    <input type="text" id= "First_name" class="form-control form-control-sm" name="First_Name">
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" id="Last_Name" class="form-control form-control-sm" name="Last_Name">
+                </div>
+                <div class="col-10">
+                    <label class="form-label">Email</label>
+                    <input type="email" id="Email" class="form-control form-control-sm" name="Email">
+                </div>
+                <div class="col-10">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control form-control-sm" id="Message" rows="3" name="Message"></textarea>
+                </div>
+                <div class="col-12">
+                    <?php echo "<p>".$message."</p>";?>
+                    <button type="submit" class="btn btn-sm btn-outline-dark">Submit</button>
+                </div>
+            </form>
+
+            <a href="#"><img src="asset/img/socialM.png" alt="" class="img" width = 85px></a>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <?php include('footer.php');?>
+
         </div>
-        <div class="col-md-5">
-            <label class="form-label">Last Name</label>
-            <input type="text" class="form-control form-control-sm" name="lname">
-        </div>
-        <div class="col-10">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control form-control-sm" name="email">
-        </div>
-        <div class="col-10">
-            <label class="form-label">Message</label>
-            <textarea class="form-control form-control-sm" rows="3" name="message"></textarea>
-        </div>
-        <div class="col-12">
-            <?php echo "<p>".$message."</p>";?>
-            <a type="submit" class="btn btn-sm btn-outline-dark">Submit</a>
-        </div>
-        </form>
-        <a href="#"><img src="asset/img/socialM.png" alt="" class="img" width = 85px></a>
         </div>
     </div>
-    <?php include('header.php'); ?>
+    
    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-    <?php include('footer.php'); ?>
-
+   
         
     </body>
     

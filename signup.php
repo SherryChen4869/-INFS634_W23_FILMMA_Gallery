@@ -8,11 +8,12 @@ $TimeDate = $date->format('Y-m-d H:i:s');
 
 require 'database/db_login.php'; //load credentials 
 
-if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and password is submitted using POST method
+if(!empty($_POST['Email']) && !empty($_POST['Password'])){ //check if email and password is submitted using POST method
 
-    $password=password_hash($_POST['password'], PASSWORD_DEFAULT); //PHP Hashing for password
+    $password=password_hash($_POST['Password'], PASSWORD_DEFAULT); //PHP Hashing for password
     //Extracting data from the database 
-    $sql = "INSERT INTO `users` (`id`, `email`, `password`, `fname`, `lname`, 'idname') VALUES (NULL, '".$_POST['email']."', '".$password."', '".$_POST['fname']."', '".$_POST['lname']."', , '".$_POST['idname']."')";
+    $sql = "INSERT INTO `Users` (`ID`, `First Name`, `Last Name`, `ID Name`, `Email`, `Password`,`Time`) 
+        VALUES (NULL, '".$_POST['First_Name']."', '".$_POST['Last_Name']."', '".$_POST['ID_Name']."', '".$_POST['Email']."', '".$password."', NULL)";
     $stmt = $conn->prepare($sql);
     //Creating New Event
     if( $stmt->execute() ){  //executing query to update the database 
@@ -41,23 +42,23 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and 
                         <h1 class="h3 mb-3 fw-normal" id="p2">Sign Up</h1>
 
                         <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="John" name="fname"><!--Define Name of input type -->
+                        <input type="text" class="form-control" id="First Name" placeholder="John" name="First_Name"><!--Define Name of input type -->
                         <label for="floatingInput">First Name</label>
                         </div>
                         <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Doe" name="lname"><!--Define Name of input type -->
+                        <input type="text" class="form-control" id="Last Name" placeholder="Doe" name="Last_Name"><!--Define Name of input type -->
                         <label for="floatingInput">Last Name</label>
                         </div>
                         <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Doe" name="idname"><!--Define Name of input type -->
+                        <input type="text" class="form-control" id="ID Name" placeholder="Doe" name="ID_Name"><!--Define Name of input type -->
                         <label for="floatingInput">ID Name</label>
                         </div>
                         <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required><!--Define Name of input type -->
+                        <input type="email" class="form-control" id="Email" placeholder="name@example.com" name="Email" required><!--Define Name of input type -->
                         <label for="floatingInput">Email</label>
                         </div>
                         <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required><!--Define Name of input type -->
+                        <input type="password" class="form-control" id="Password" placeholder="Password" name="Password" required><!--Define Name of input type -->
                         <label for="floatingPassword">Password</label>
                         </div>
                         
@@ -72,7 +73,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and 
                    
         
         
-        <?php echo '<span style="font-size: 8px;"> '; include('footer.php'); ?>
+        <?php include('footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>

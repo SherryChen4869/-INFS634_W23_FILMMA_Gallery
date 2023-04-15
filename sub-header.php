@@ -11,9 +11,9 @@
                         Theme
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="TESSSST.php">Natuarl</a></li>
-                    <li><a class="dropdown-item" href="Test2.php">Portrait</a></li>
-                    <li><a class="dropdown-item" href="#">Animals</a></li>
+                    <li><a class="dropdown-item" href="G-T-Na.php">Natuarl</a></li>
+                    <li><a class="dropdown-item" href="G-T-Po.php">Portrait</a></li>
+                    <li><a class="dropdown-item" href="G-T-An.php">Animals</a></li>
                 </ul>
             </li>
 
@@ -22,9 +22,9 @@
                         Camera
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Olympus</a></li>
-                    <li><a class="dropdown-item" href="#">Canon</a></li>
-                    <li><a class="dropdown-item" href="#">Others</a></li>
+                    <li><a class="dropdown-item" href="G-C-Ol.php">Olympus</a></li>
+                    <li><a class="dropdown-item" href="G-C-Ca.php">Canon</a></li>
+                    <li><a class="dropdown-item" href="G-C-Other.php">Others</a></li>
                 </ul>
             </li>
 
@@ -33,9 +33,9 @@
                         Film
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Kodak</a></li>
-                    <li><a class="dropdown-item" href="#">Fuji</a></li>
-                    <li><a class="dropdown-item" href="#">Others</a></li>
+                    <li><a class="dropdown-item" href="G-F-Ko.php">Kodak</a></li>
+                    <li><a class="dropdown-item" href="G-F-Fu.php">Fuji</a></li>
+                    <li><a class="dropdown-item" href="G-F-Other.php">Others</a></li>
                 </ul>
             </li>
         </ul>

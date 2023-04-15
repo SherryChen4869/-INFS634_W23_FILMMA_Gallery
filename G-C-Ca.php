@@ -16,7 +16,7 @@
         <?php 
             require 'database/G_login.php';
 
-            $query="SELECT * FROM Gallery"; 
+            $query="SELECT * FROM Gallery WHERE Camera = 'Canon'"; 
             $result = $conn->query($query);
 
             if ($result->num_rows > 0){

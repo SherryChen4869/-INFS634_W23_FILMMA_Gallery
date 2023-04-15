@@ -4,7 +4,7 @@ date_default_timezone_set('America/Toronto'); //setting default timezone
 $date = new DateTime(); //Creating a variable for DateTime
 $TimeDate = $date->format('Y-m-d H:i:s'); 
 
-if( isset($_SESSION['user_id']) ){ //Checking if session already exisits and has a user information? 
+if( isset($_SESSION['Users']) ){ //Checking if session already exisits and has a user information? 
 
     session_start(); //Session is started 
 	header("Location: dashboard.php"); //redirect to Dashboard page 
@@ -12,18 +12,18 @@ if( isset($_SESSION['user_id']) ){ //Checking if session already exisits and has
 
 require 'database/db_login.php'; //load credentials 
 
-if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and password is submitted using POST method
+if(!empty($_POST['Email']) && !empty($_POST['Password'])){ //check if email and password is submitted using POST method
 
     //Extracting data from the database for matching 
-    $query="SELECT id,email,password FROM users WHERE email LIKE '".$_POST['email']."'"; //creating query
+    $query="SELECT ID,Email,Password FROM Users WHERE Email LIKE '".$_POST['Email']."'"; //creating query
     $query_exc = $conn->query($query);
     $results= $query_exc->fetch(PDO::FETCH_ASSOC); //executing query to save results in $results
 
-	if(count($results) > 0 && password_verify($_POST['password'],$results['password']) ){ //verifying atleast 1 email matches in database  & veriffying password 
+	if(count($results) > 0 && password_verify($_POST['Password'],$results['Password']) ){ //verifying atleast 1 email matches in database  & veriffying password 
 
         session_start(); //Session is started 
-		$_SESSION['user_id'] = $results['id']; //setting session user information 
-		header("Location: dashboard.php");
+		$_SESSION['Users'] = $results['id']; //setting session user information 
+		$message="You're in";
 	}
 		else
 		{
@@ -48,12 +48,12 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and 
                         <h1 class="h3 mb-3 fw-normal" id='p2'>Sign In</h1>
 
                         <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"><!--Define Name of input type -->
+                        <input type="email" class="form-control" id="Email" placeholder="name@example.com" name="Email"><!--Define Name of input type -->
                         <label for="floatingInput">Email address</label>
                         </div>
 
                         <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"><!--Define Name of input type -->
+                        <input type="password" class="form-control" id="Password" placeholder="Password" name="Password"><!--Define Name of input type -->
                         <label for="floatingPassword">Password</label>
                         </div>
 
@@ -71,7 +71,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and 
         
            
 
-        <?php echo '<span style="font-size: 8px;"> '; include('footer.php'); ?>
+        <?php include('footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>

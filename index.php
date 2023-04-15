@@ -11,11 +11,11 @@
     <body>
         <?php include('header.php'); ?>
 
-        <div class="container">
-            <div class="image">
-                <img src="asset/img/main.jpg" alt="main">
+        <div class="row">
+            <div class="col-sm-8">
+                <img src="asset/img/main.jpg" class="img-fluid" alt="">
             </div>
-            <div class="text">
+            <div class="col-sm-4">
                 <p id="p3">You're now in the world of film photography.<br>Begin your journey from here...</p>
             </div>
         </div>
