@@ -12,7 +12,7 @@ To get started with FILMMA, you can sign up for an account on the website. Once 
 
 ### Installing
 
-* No need to install anything, you only need to visit the website for everything.
+No need to install anything, you only need to visit the website for everything.
 
 ### How to use
 
