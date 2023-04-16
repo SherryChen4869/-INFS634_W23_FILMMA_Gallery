@@ -36,5 +36,5 @@ If you are interested in contributing to FILMMA, you can submit your interest in
 Inspiration, code snippets, etc.
 * [Free Frontend](https://freefrontend.com/bootstrap-galleries/)
 * [Bootstrap](https://getbootstrap.com/)
-* [Leica]((https://leicacamera.com/en-int/photography)
+* [Leica](https://leicacamera.com/en-int/photography)
 * [Olympus Global Pro Gallery](https://cameras.olympus.com/gallery/en-ca)
