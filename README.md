@@ -14,9 +14,9 @@ To get started with FILMMA, you can sign up for an account on the website. Once 
 
 * No need to install anything, you only need to visit the website for everything.
 
-### Executing program
+### How to use
 
-When you click gallery 
+When you click gallery, all posted photos will show up. To enlarge the photo and see the posted content (description), click the photo directly. The like button is still not working right now. At the top right corner of the gallery, you can apply the filter by selecting the theme, camera, and film. 
 
 ## Help
 
